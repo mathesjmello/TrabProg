@@ -19,8 +19,10 @@ public static class Persistence {
 		musicvolume=PlayerPrefs.GetFloat("MVolume");
 		sfxvolume=PlayerPrefs.GetFloat("SFXVolume");
 		
-		levelstatus = PlayerPrefsX.GetIntArray ("LevelStatus");
-		
+		var temp = PlayerPrefsX.GetIntArray ("LevelStatus");
+		if (temp.Length == levelstatus.Length)
+			levelstatus = temp;
+
 	}
 }
 

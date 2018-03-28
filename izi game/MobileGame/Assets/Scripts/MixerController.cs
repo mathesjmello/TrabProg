@@ -18,10 +18,11 @@ public class MixerController : MonoBehaviour {
 		PlayerPrefs.SetFloat ("SFXVolume", vol);
 	}
 	// Use this for initialization
-	void Start () {
-		
-		SliderSFx.value = PlayerPrefs.GetFloat ("SFXVolume",80);
-		slider.value = PlayerPrefs.GetFloat ("MVolume",80);
+	void Start ()
+	{
+
+		SliderSFx.value = 1;
+		slider.value = 1;
 		PlayerPrefs.SetFloat("SFXVolume", SliderSFx.value);
 		PlayerPrefs.SetFloat("MVolume", slider.value);
 	}

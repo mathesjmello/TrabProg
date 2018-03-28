@@ -6,13 +6,13 @@ public class Pause : MonoBehaviour
 {
 
 	private float normalTime;
-	
+
 	public void PauseGame()
 	{
 		normalTime = Time.timeScale;
 		Time.timeScale = 0f;
 	}
-	
+
 	public void ResumeGame()
 	{
 
@@ -24,4 +24,11 @@ public class Pause : MonoBehaviour
 		Time.timeScale = normalTime;
 		MyLoading.Loading("LevelSelect");
 	}
+
+	public void RestartLvl(string nomefaze)
+	{
+		Time.timeScale = normalTime;
+		MyLoading.Loading(nomefaze);	
+	}
+
 }
